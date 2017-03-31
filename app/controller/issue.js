@@ -19,8 +19,8 @@ module.exports = app => {
             }
             validator.valid(paramsData.phone, "isPhone", "手机号码有误，请重新填写");
             errors = validator.emitValid();
-            // ctx.body = errors;
-            // return;
+            ctx.body = errors;
+            return;
 
             if (!errors[0]) {
                 try {
