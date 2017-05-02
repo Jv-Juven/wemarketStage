@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = {
     mysql: {
         enable: true,
-        package: 'egg-mysql'
+        package: 'egg-sequelize'
     },
     valid: {
         enable: true,
