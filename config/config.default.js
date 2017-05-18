@@ -7,7 +7,10 @@ module.exports = appInfo => {
     config.keys = appInfo.name + '_1490415777369_9966';
     // 数据库配置
     config.sequelize = {
+        // 数据库类型
         dialect: 'mariadb',
+        // 数据库名
+        database: 'wemarketStage',
         // host
         host: 'localhost',
         // 端口号
@@ -15,9 +18,7 @@ module.exports = appInfo => {
         // 用户名
         username: 'root',
         // 密码
-        password: '',
-        // 数据库名
-        database: 'webackstage'
+        password: ''
     }
 
     return config;
