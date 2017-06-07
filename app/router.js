@@ -22,4 +22,8 @@ module.exports = app => {
     app.post('/csrf', "security.csrf");
 
     app.get('/getInfo', "mysql.getInfo");
+    app.get('/setInfo', 'mongoose.create');
+
+    app.get('/trip-hotel/hotel/v2/roomRate', 'mock.roomRate');
+    // app.get('/trip-hotel/hotel/v2/roomRate', 'mock.roomRate');
 };

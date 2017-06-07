@@ -6,20 +6,10 @@ module.exports = appInfo => {
     // should change to your own
     config.keys = appInfo.name + '_1490415777369_9966';
     // 数据库配置
-    config.sequelize = {
-        // 数据库类型
-        dialect: 'mariadb',
-        // 数据库名
-        database: 'wemarketStage',
-        // host
-        host: 'localhost',
-        // 端口号
-        port: '3306',
-        // 用户名
-        username: 'root',
-        // 密码
-        password: ''
-    }
+    // config.mongoose = {
+    //     url: 'mongodb://127.0.0.1:27017/wemarketStage',
+    //     options: {}
+    // }
 
     return config;
 };

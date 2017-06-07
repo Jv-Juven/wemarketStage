@@ -4,12 +4,16 @@ const path = require('path');
 // exports.static = true;
 // 配置从这里开始
 module.exports = {
-    mysql: {
-        enable: true,
-        package: 'egg-sequelize'
-    },
+    // mongoose: {
+    //     enable: true,
+    //     package: 'egg-mongoose'
+    // },
     valid: {
         enable: true,
         path: path.join(__dirname, "../lib/plugin/egg-valid")
+    },
+    cors: {
+        enable: true,
+        package: 'egg-cors'
     }
 }
