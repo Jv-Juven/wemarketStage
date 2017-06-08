@@ -32,6 +32,7 @@
   },
   "scripts": {
     "start": "node index.js",
+    "debug": "egg-bin debug --debug-brk",
     "dev": "egg-bin dev",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

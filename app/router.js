@@ -2,7 +2,7 @@
 
 module.exports = app => {
     app.get('/index', 'home.index');
-    app.get('/http', "home.http");
+    app.get('/get/http', "home.http");
     app.post('/post', "home.post");
     app.post('/simglePost', "post.post");
     app.put('/put', "home.put");
@@ -24,6 +24,8 @@ module.exports = app => {
     app.get('/getInfo', "mysql.getInfo");
     app.get('/setInfo', 'mongoose.create');
 
-    app.get('/trip-hotel/hotel/v2/roomRate', 'mock.roomRate');
-    // app.get('/trip-hotel/hotel/v2/roomRate', 'mock.roomRate');
+    // app.post('/trip-hotel/hotel/v2/roomRate', 'corsConfig', 'mock.roomRate');
+    // app.options('roomRate', '/trip-hotel/hotel/v2/roomRate', 'mock.index');
+    app.post('roomRate', '/trip-hotel/hotel/v2/roomRate', 'mock.index');
+    // app.post('/trip-hotel/hotel/v2/roomRate', 'mock.roomRate');
 };

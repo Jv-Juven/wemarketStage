@@ -12,10 +12,10 @@ module.exports = {
     },
     cors: {
         credentials: 'Access-Control-Allow-Credentials'
-    }
+    },
     // development: {
     //     ignoreDirs: ['app/components', 'app/views'], // 指定过滤的目录（包括子目录）
     //     watchDirs: ['lib'] // 指定监听的目录
     // },
-
+    // middleware: [ 'corsConfig' ]
 }
