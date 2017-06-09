@@ -1,7 +1,7 @@
 module.exports = app => {
     return class MockController extends app.Controller {
         async index(ctx) {
-            console.log(ctx.request.header.token);
+            console.log(ctx.request.body);
             // console.log(ctx.request.header.origin);
             // ctx.set('Access-Control-Allow-Origin', ctx.request.header.origin)
             // // ctx.set('Access-Control-Expose-Headers', 'Set-Cookie')
@@ -9,6 +9,23 @@ module.exports = app => {
             // ctx.set('Access-Control-Allow-Credentials', true)
             // // ctx.set('Access-Control-Allow-Headers', '*');
             // ctx.set('Access-Control-Allow-Headers', 'token, Accept, x-csrf-token, X-Custom-Header, X-Requested-With, Origin, Content-Type, Authorization');
+            /**
+             * 获取单一价格的酒店信息和房型数据
+             * 订单填写页面使用
+             * roomTypeId, mustPay, memberActCode, productType
+             */
+            /*
+             * 入参：
+             * brandId	String	Y	 	品牌ID	20151109
+             * innId	String	Y	 	酒店ID	20151028
+             * roomTypeId	String	N	 	房型ID	20151028
+             * beginDate	long	Y	 	入住时间
+             * endDate	long	Y	 	离店时间
+             * memberActCode	String	N	 	活动编码	20160328新增
+             * languageCode	String	N	0	语言编码 0：支持中文，1：支持英文	20170411新增
+             * mustPay	String	N	 	1:预付 0：到付	20170504新增
+             * channelCode String Y 渠道号
+            */
             let data = {
                 "msgCode": 100,
                 "message": "请求成功",
@@ -70,7 +87,8 @@ module.exports = app => {
                 			"checkIn": "12:00", // 入住时间点提示，日期用入住当天
                 			"checkOut": "13:00" // 最晚离店时间。日期用离店日期
                 		}
-                    }
+                    },
+                    "balance": "561.00" // 用户储值
                 }
             }
             ctx.body = data;
