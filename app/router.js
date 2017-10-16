@@ -27,5 +27,11 @@ module.exports = app => {
     // app.post('/trip-hotel/hotel/v2/roomRate', 'corsConfig', 'mock.roomRate');
     // app.options('roomRate', '/trip-hotel/hotel/v2/roomRate', 'mock.index');
     app.post('roomRate', '/trip-hotel/hotel/v2/roomRate', 'mock.index');
-    // app.post('/trip-hotel/hotel/v2/roomRate', 'mock.roomRate');
+    app.post('getMember', '/trip-book/wehotel/getMember', 'mock.memberInfo');
+    app.post('updateMember', '/trip-book/wehotel/updateMember', 'mock.updateMember');
+    app.post('sn', '/trip-book/booking/getSn', 'mock.sn');
+    app.post('/order/preBookSuccess', 'mock.orderSuccess');
+    app.post('/order/prepareCancel', 'mock.prepareCancel');
+    app.post('/trip-book/bundle/getGoods', 'mock.tiedSelleGoods');
+    app.post('/trip-book/order/orderDetail', 'mock.orderDetail');
 };

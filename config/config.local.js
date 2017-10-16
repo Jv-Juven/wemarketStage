@@ -7,7 +7,8 @@ module.exports = {
             enable: false
         },
         domainWhiteList: [
-            'http://10.100.31.217:8888'
+            'http://10.100.31.217:8888',
+            'http://10.100.31.31'
         ]
     },
     cors: {
