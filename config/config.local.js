@@ -5,11 +5,11 @@ module.exports = {
         },
         methodnoallow: {
             enable: false
-        },
-        domainWhiteList: [
-            'http://10.100.31.217:8888',
-            'http://10.100.31.31'
-        ]
+        }
+        // domainWhiteList: [
+        //     'http://10.100.31.217:8888',
+        //     'http://10.100.31.31'
+        // ]
     },
     cors: {
         credentials: 'Access-Control-Allow-Credentials'
