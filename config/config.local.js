@@ -12,6 +12,7 @@ module.exports = {
         // ]
     },
     cors: {
+        origin: '*',
         credentials: 'Access-Control-Allow-Credentials'
     },
     // development: {
