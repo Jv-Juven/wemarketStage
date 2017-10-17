@@ -31,3 +31,9 @@ $ EGG_SERVER_ENV=prod npm start
 
 
 [egg]: https://eggjs.org
+
+# 安装的模块：
+- [egg-mysql](https://github.com/eggjs/egg-mysql) 操作mysql数据库模块
+- [egg-sequelize]() 数据库操作模块
+- [egg-mongoose]() `mongodb`模块
+- [egg-cors]() 解决跨域问题
